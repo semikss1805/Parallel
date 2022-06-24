@@ -96,8 +96,11 @@
 
     public void CollectMin(int[] result)
     {
-        this.min = result[0];
-        this.minIndex = result[1];
+        if (result[0] < this.min)
+        {
+            this.min = result[0];
+            this.minIndex = result[1];
+        }
     }
 
     public int[] PartMin(int startIndex, int finishIndex)

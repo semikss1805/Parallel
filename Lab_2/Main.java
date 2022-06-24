@@ -64,8 +64,10 @@ class ArrClass {
     }
 
     synchronized public void collectMin(int[] res){
-        this.min = res[0];
-        this.minIndex = res[1];
+        if (res[0] < min) {
+            this.min = res[0];
+            this.minIndex = res[1];
+        }
     }
 
     private int threadCount = 0;
